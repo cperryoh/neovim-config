@@ -8,6 +8,7 @@ vim.cmd("nmap > v>")
 vim.cmd("imap jk <Esc>")
 vim.g.mapleader = " "
 vim.cmd("nmap <leader>wq :wq<CR>")
+vim.cmd("nmap <Esc><Esc> :qa<CR>")
 function man(args)
   os.execute("man "+args[0])
 end
