@@ -10,6 +10,7 @@ vim.g.mapleader = " "
 vim.cmd("nmap <leader>wq :wq<CR>")
 vim.cmd("nmap <Esc><Esc> :qa<CR>")
 vim.cmd("nmap <leader><CR> <C-w>l")
+vim.cmd("imap jky <C-y>")
 function man(args)
   os.execute("man "+args[0])
 end
