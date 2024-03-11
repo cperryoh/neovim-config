@@ -10,6 +10,7 @@ vim.g.mapleader = " "
 vim.cmd("nmap <leader>wq :wq<CR>:qa<CR>")
 vim.cmd("nmap <Esc><Esc> :qa<CR>")
 vim.cmd("nmap <leader><CR> <C-w>l")
+vim.cmd("nmap <leader>t :Neotree close<CR>")
 function man(args)
   os.execute("man "+args[0])
 end
