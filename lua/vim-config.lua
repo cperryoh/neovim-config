@@ -10,7 +10,6 @@ vim.cmd("nmap t <CMD>BufferNext<CR>")
 vim.cmd("nmap T <CMD>BufferPrevious<CR>")
 vim.g.mapleader = " "
 vim.cmd("nmap <leader>wq :wq<CR>:qa<CR>")
-vim.cmd("nmap <Esc><Esc> :qa<CR>")
 vim.cmd("nmap <leader><CR> <C-w>l")
 function man(args)
   os.execute("man "+args[0])
