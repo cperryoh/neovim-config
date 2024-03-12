@@ -6,6 +6,8 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("nmap < v<")
 vim.cmd("nmap > v>")
 vim.cmd("imap jk <Esc>")
+vim.cmd("nmap t <CMD>BufferNext<CR>")
+vim.cmd("nmap T <CMD>BufferPrevious<CR>")
 vim.g.mapleader = " "
 vim.cmd("nmap <leader>wq :wq<CR>:qa<CR>")
 vim.cmd("nmap <Esc><Esc> :qa<CR>")
