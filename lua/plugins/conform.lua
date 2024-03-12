@@ -20,20 +20,15 @@ return {
 			lua = { "stylua" },
 			python = { "isort", "black" },
 			javascript = { { "prettierd", "prettier" } },
-			c = {
-				{
-					cmd = "clang-format",
-					args = { "--style=\"{'ColumnLimit':100}\"" },
-				},
-			},
+			c = { "clang_format" },
 		},
-		-- Set up format-on-save
-		format_on_save = { timeout_ms = 500, lsp_fallback = true },
-		-- Customize formatters
-		formatters = {
-			shfmt = {
-				prepend_args = { "-i", "2" },
-			},
+	},
+	-- Set up format-on-save
+	format_on_save = { timeout_ms = 500, lsp_fallback = true },
+	-- Customize formatters
+	formatters = {
+		shfmt = {
+			prepend_args = { "-i", "2" },
 		},
 	},
 	init = function()
