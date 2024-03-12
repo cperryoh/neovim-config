@@ -20,7 +20,12 @@ return {
 			lua = { "stylua" },
 			python = { "isort", "black" },
 			javascript = { { "prettierd", "prettier" } },
-      c={"clang_format"}
+			c = {
+				{
+					cmd = "clang-format",
+					args = { "--style=\"{'ColumnLimit':100}\"" },
+				},
+			},
 		},
 		-- Set up format-on-save
 		format_on_save = { timeout_ms = 500, lsp_fallback = true },
