@@ -74,7 +74,7 @@ return {
 					vim.api.nvim_command("!" .. vim.o.keywordprg .. " " .. cw)
 				end
 			end
-			keyset("n", "K", "<CMD>lua _G.show_docs()<CR>", { silent = true })
+			keyset("n", "<leader>d", "<CMD>lua _G.show_docs()<CR>", { silent = true })
 
 			-- Highlight the symbol and its references on a CursorHold event(cursor is idle)
 			vim.api.nvim_create_augroup("CocGroup", {})
@@ -102,7 +102,6 @@ return {
 
 			-- Apply codeAction to the selected region
 			-- Example: `<leader>aap` for current paragraph
-			local opts = { silent = true, nowait = true }
 			keyset("x", "<leader>a", "<Plug>(coc-codeaction-selected)", opts)
 			keyset("n", "<leader>a", "<Plug>(coc-codeaction-selected)", opts)
 
@@ -119,7 +118,7 @@ return {
 			keyset("n", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 
 			-- Run the Code Lens actions on the current line
-			keyset("n", "<leader>cl", "<Plug>(coc-codelens-action)", opts)
+			keyset("n", "<leader>v", "<Plug>(coc-codelens-action)", opts)
 
 			-- Map function and class text objects
 			-- NOTE: Requires 'textDocument.documentSymbol' support from the language server
