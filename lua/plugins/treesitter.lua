@@ -8,8 +8,7 @@ return {
 			config.setup({
 				auto_install = true,
 				highlight = {
-					enable = true,
-					disable = { "norg" }, -- list of language that will be disabled
+					enable = true
 				},
 				indent = { enable = true },
 			})
