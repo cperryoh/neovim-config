@@ -1,4 +1,5 @@
 vim.cmd("set expandtab")
+vim.cmd("setlocal spell spelllang=en_us");
 vim.cmd("set number")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
