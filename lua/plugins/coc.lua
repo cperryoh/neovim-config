@@ -62,9 +62,9 @@ return {
 
 			-- Use `[g` and `]g` to navigate diagnostics
 			-- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
-			normal_mappings["]g"] =
+			normal_mappings["]"] =
 				{ "<Plug>(coc-diagnostic-prev)", "[Coc] Prev diagnostic", mode = "n", silent = true }
-			normal_mappings["]g"] =
+			normal_mappings["["] =
 				{ "<Plug>(coc-diagnostic-next)", "[Coc] Next diagnostic", mode = "n", silent = true }
 
 			-- GoTo code navigation

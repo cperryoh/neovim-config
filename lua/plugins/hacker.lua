@@ -1,0 +1,5 @@
+return {
+   { 
+        "letieu/hacker.nvim"
+  } 
+}
