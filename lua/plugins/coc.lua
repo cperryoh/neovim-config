@@ -87,7 +87,7 @@ return {
 			end
 
 			normal_mappings["<leader>d"] =
-				{ "<CMD>lua _G.show_docs()<CR>", "[Coc] Show docs", mode = "n", silent = true }
+				{ '<CMD>lua _G.show_docs()<CR>', "[Coc] Show docs", mode = "n", silent = true }
 
 			-- Highlight the symbol and its references on a CursorHold event(cursor is idle)
 			vim.api.nvim_create_augroup("CocGroup", {})

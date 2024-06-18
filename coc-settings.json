@@ -1,5 +1,15 @@
 {
   "clangd.path": "/usr/bin/clangd",
-  "coc.preferences.extensionUpdateCheck": "daily"
+  "java.implementationsCodeLens.enabled":true,
+  "semanticTokens.enable": true,
+  "java.signatureHelp.description.enabled":true,
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "java.imports.gradle.wrapper.checksums": [
+    {
+      "sha256": "1fe3f075be9910855d6cb6a2c2964269acff658ed411c465179d5c434b957ce5",
+      "allowed": true
+    }
+  ],
+  "java.import.gradle.java.home": "/Users/cperryoh/Library/Java/JavaVirtualMachines/corretto-11.0.23/Contents/Home"
 
 }
