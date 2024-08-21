@@ -4,7 +4,7 @@ return {
 		build = ":TSUpdate",
 		config = function()
 			local config = require("nvim-treesitter.configs")
-      require("nvim-treesitter.install").compilers = { "gcc-12" }
+      require("nvim-treesitter.install").compilers = { "gcc" }
 			config.setup({
 				auto_install = true,
 				highlight = {
