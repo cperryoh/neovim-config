@@ -1,5 +1,10 @@
+vim.g.mapleader = " "
+
 vim.cmd("set expandtab")
-vim.cmd("setlocal spell spelllang=en_us");
+vim.api.nvim_set_keymap("n", "<leader>fw", ":w<CR>", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("n", "<leader>fq", ":wqa<CR>", { noremap = true, silent = true })
+vim.cmd("setlocal spell spelllang=en_us")
 vim.cmd("set number")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
@@ -7,12 +12,14 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("nmap < v<")
 vim.cmd("nmap > v>")
 vim.cmd("imap jk <Esc>")
-vim.cmd("nmap t <CMD>BufferNext<CR>")
 vim.cmd("nmap T <CMD>BufferPrevious<CR>")
-vim.g.mapleader = " "
+
+vim.cmd("nmap tn <CMD>BufferNext<CR>")
+vim.cmd("nmap tp <CMD>BufferPrevious<CR>")
+vim.cmd("nnoremap tc :tabclose<CR>")
 vim.cmd("nmap <leader>wq :wq<CR>:qa<CR>")
 vim.cmd("nmap <leader><CR> <C-w>l")
 function man(args)
-  os.execute("man "+args[0])
+	os.execute("man " + args[0])
 end
-vim.api.nvim_create_user_command('Man',man, { count=1 })
+vim.api.nvim_create_user_command("Man", man, { count = 1 })
