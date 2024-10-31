@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 
 vim.cmd("set expandtab")
+vim.api.nvim_set_keymap("t", "<esc>", "<C-\\><C-N>", { noremap=true,desc = "back to normal mode" })
 vim.api.nvim_set_keymap("n", "<leader>fw", ":w<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "\\wv", "<C-W><C-V>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "\\wh", "<C-W><C-n>", { noremap = true, silent = true })
