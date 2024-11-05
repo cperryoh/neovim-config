@@ -14,3 +14,4 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("vim-config")
 require("lazy").setup("plugins")
+vim.keymap.set("n", "<leader>k", vim.lsp.buf.rename)

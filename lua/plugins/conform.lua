@@ -6,6 +6,7 @@ return {
 				lua = { "stylua" },
 				-- Conform will run multiple formatters sequentially
 				python = { "isort", "black" },
+				java = { "google_java" },
 				-- You can customize some of the format options for the filetype (:help conform.format)
 				rust = { "rustfmt", lsp_format = "fallback" },
 				-- Conform will run the first available formatter
@@ -14,6 +15,18 @@ return {
 				typescriptreact = { "prettier" },
 				c = { "clang-format" },
 				json = { "prettier" },
+			},
+			formatters = {
+				google_java = {
+					command = "java",
+					args = {
+						"-jar",
+						"/Users/cperryoh/bin/googleFormat.jar",
+						"--skip-removing-unused-imports",
+						"--skip-sorting-imports",
+						"-",
+					},
+				},
 			},
 		})
 		vim.api.nvim_create_autocmd("BufWritePre", {
