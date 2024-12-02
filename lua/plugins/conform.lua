@@ -4,6 +4,7 @@ return {
 		require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
+				css = { "rustywind" },
 				-- Conform will run multiple formatters sequentially
 				python = { "isort", "black" },
 				java = { "google_java" },
