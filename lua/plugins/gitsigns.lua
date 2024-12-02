@@ -1,7 +1,7 @@
 return {
 	{
 		url = "https://github.com/lewis6991/gitsigns.nvim.git",
-    branch="release",
+		branch = "release",
 		config = function()
 			require("gitsigns").setup({
 				signs = {
@@ -19,7 +19,6 @@ return {
 				watch_gitdir = {
 					follow_files = true,
 				},
-				auto_attach = true,
 				attach_to_untracked = false,
 				current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
 				current_line_blame_opts = {
@@ -46,6 +45,6 @@ return {
 					enable = false,
 				},
 			})
-		end
+		end,
 	},
 }

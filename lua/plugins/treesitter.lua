@@ -4,11 +4,11 @@ return {
 		build = ":TSUpdate",
 		config = function()
 			local config = require("nvim-treesitter.configs")
-      require("nvim-treesitter.install").compilers = { "gcc" }
+			require("nvim-treesitter.install").compilers = { "gcc" }
 			config.setup({
 				auto_install = true,
 				highlight = {
-					enable = true
+					enable = true,
 				},
 				indent = { enable = true },
 			})
