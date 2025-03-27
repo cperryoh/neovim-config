@@ -16,6 +16,8 @@ vim.api.nvim_set_keymap("n", "\\h", "<C-W>h", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "\\k", "<C-W>k", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "\\l", "<C-W>l", { noremap = true, silent = true })
 
+vim.opt.clipboard = 'unnamedplus'
+
 vim.api.nvim_set_keymap("n", "<leader>fq", ":wqa<CR>", { noremap = true, silent = true })
 vim.cmd("setlocal spell spelllang=en_us")
 vim.cmd("set number")
