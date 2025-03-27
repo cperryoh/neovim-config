@@ -63,6 +63,14 @@ vim.keymap.set("n", "<leader><CR>", "<C-w>l", { desc = "Move to right window", n
 vim.keymap.set("n", "<leader>nc", ":Neotree close<cr>", { desc = "Close neotree", noremap = true, silent = true })
 
 -- (Optional) Mapping for indent adjustments in visual mode
+vim.opt.clipboard = 'unnamedplus'
+
+vim.api.nvim_set_keymap("n", "<leader>fq", ":wqa<CR>", { noremap = true, silent = true })
+vim.cmd("setlocal spell spelllang=en_us")
+vim.cmd("set number")
+vim.cmd("set tabstop=2")
+vim.cmd("set softtabstop=2")
+vim.cmd("set shiftwidth=2")
 vim.cmd("nmap < v<")
 vim.cmd("nmap > v>")
 
