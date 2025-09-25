@@ -1,6 +1,25 @@
 -- Set leader key
 vim.g.mapleader = " "
 
+-- Map Alt+letter to run macro in that register
+local letters = 'abcdefghijklmnopqrstuvwxyz'
+for i = 1, #letters do
+  local letter = letters:sub(i, i)
+  vim.keymap.set('n', '<M-' .. letter .. '>', '@' .. letter, { desc = 'Run macro ' .. letter })
+end
+
+-- disable arrow keys
+vim.keymap.set('', '<Up>', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set('', '<Down>', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set('', '<Left>', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set('', '<Right>', '<Nop>', { noremap = true, silent = true })
+
+-- Also disable them in insert mode
+vim.keymap.set('i', '<Up>', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set('i', '<Down>', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set('i', '<Left>', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set('i', '<Right>', '<Nop>', { noremap = true, silent = true })
+
 -- Use vim.opt for setting options
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
@@ -31,20 +50,21 @@ vim.keymap.set("n", "<leader>wq", ":wq<CR>:qa<CR>", { noremap = true, silent = t
 
 -- Window management mappings (grouped for clarity)
 local window_mappings = {
-  wv = "<C-W><C-V>",
-  wh = "<C-W><C-N>",
+  v = "<C-W><C-V>",
+  o = "<C-W><C-N>",
+  c = "<C-W>c",
   mj = "<C-W>J",
   mr = "<C-W>r",
   mh = "<C-W>H",
   mk = "<C-W>K",
-  ml = "<C-W>l",
+  ml = "<C-W>L",
   j  = "<C-W>j",
   h  = "<C-W>h",
   k  = "<C-W>k",
   l  = "<C-W>l",
 }
 for key, cmd in pairs(window_mappings) do
-  vim.keymap.set("n", "'" .. key, cmd, { noremap = true, silent = true })
+  vim.keymap.set("n", "<M-w>" .. key, cmd, { noremap = true, silent = true })
 end
 
 -- Window resizing mappings
@@ -60,7 +80,6 @@ vim.keymap.set("n", "cc", ":BufferClose<CR>", { desc = "Close current buffer", n
 vim.keymap.set("n","<leader>n", ":tabnew<cr>",{desc="Make new tab",noremap=true,silent=true})
 vim.keymap.set("n", "<leader><CR>", "<C-w>l", { desc = "Move to right window", noremap = true, silent = true })
 
-vim.keymap.set("n", "<leader>nc", ":Neotree close<cr>", { desc = "Close neotree", noremap = true, silent = true })
 
 -- (Optional) Mapping for indent adjustments in visual mode
 
@@ -97,4 +116,3 @@ vim.api.nvim_create_user_command("Man", function(opts)
   end
   os.execute("man " .. opts.args)
 end, { nargs = 1 })
-

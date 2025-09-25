@@ -22,7 +22,7 @@ return {
 					command = "java",
 					args = {
 						"-jar",
-						"/Users/cperryoh/bin/googleFormat.jar",
+						"/home/cperryoh/bin/googleFormat.jar",
 						"--skip-removing-unused-imports",
 						"--skip-sorting-imports",
 						"-",
