@@ -5,7 +5,6 @@ return {
       require("mason").setup()
     end,
   },
-
   {
     "mason-org/mason-lspconfig.nvim",
     dependencies = { "mason-org/mason.nvim" },
@@ -15,7 +14,12 @@ return {
         "jsonls", "html", "cssls", "hyprls"
       },
       automatic_enable = true,
-      -- No handlers block — let the native API handle everything
+      handlers = {
+        function(server_name)
+          -- The native LSP API (vim.lsp.config) is handling setup
+          -- mason just needs to install the servers
+        end,
+      },
     },
   },
   {
